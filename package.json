@@ -1,17 +1,27 @@
 {
   "name": "mk-table",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "description": "CLI tool that outputs a table of contents based on a markdown file headers",
+  "main": "dist/index.js",
+  "bin": {
+    "mktable": "dist/index.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "test": "vitest",
+    "build": "tsup src/index.ts"
+  },
+  "keywords": [
+    "markdown",
+    "table",
+    "contents",
+    "cli"
+  ],
+  "author": "wesbragagt",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.10.4",
     "tsup": "^8.0.1",
+    "tsx": "^4.6.2",
     "typescript": "^5.3.3",
     "vitest": "^1.0.4"
   }
