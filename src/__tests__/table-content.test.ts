@@ -22,6 +22,10 @@ python setup.py install
 Testencode "Hello World"
 \`\`\`
 
+\`\`\`markdown
+## Should not be included:
+\`\`\`
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
@@ -38,12 +42,16 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 describe(`${TableContent.name}`, () => {
   it('generates table of contents with bullets', () => {
     const toc = new TableContent(getTestContent());
-    expect(toc.make()).toEqual([
+
+    const expected = [
       '## Table of Contents',
       '  - [Installation](#installation)',
       '    - [Usage](#usage)',
+      '  - [Should not be included:](#should-not-be-included:)',
       '  - [Contributing](#contributing)',
-      '  - [License](#license)'
-    ]);
-  })
+      '  - [License](#license)',
+    ];
+    expect(toc.make()).toEqual(expected);
+  }) 
 })
+

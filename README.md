@@ -37,6 +37,20 @@ You can even automate your README table of contents on lint-staged for example w
 }
 ```
 
+## Caveats
+
+This utility will strip out colons from the headers in order to properly route to the anchor. This means that if you have a header like this:
+
+```markdown
+## Example:
+```
+
+It will be rendered as:
+
+```markdown
+## Example
+```
+
 ## Author
 
 - [Wes Braga](https://github.com/wesbragagt)
