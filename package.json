@@ -1,5 +1,5 @@
 {
-  "name": "mk-table",
+  "name": "mktable",
   "version": "0.0.1",
   "description": "CLI tool that outputs a table of contents based on a markdown file headers",
   "main": "dist/index.js",
@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "vitest",
-    "build": "tsup src/index.ts"
+    "build": "tsup src/index.ts",
+    "lint": "oxlint src",
+    "typecheck": "tsc --noEmit"
   },
   "keywords": [
     "markdown",
@@ -20,6 +22,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.10.4",
+    "oxlint": "^0.0.20",
     "tsup": "^8.0.1",
     "tsx": "^4.6.2",
     "typescript": "^5.3.3",

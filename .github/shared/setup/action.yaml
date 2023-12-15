@@ -1,0 +1,20 @@
+name: Setup
+description: 'Manages shared setup for dependencies and caching'
+
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version-file: '.nvmrc'
+    - uses: actions/cache@v3
+      id: node_modules-cache
+      with:
+        path: '**/node_modules'
+        key: ${{runner.os}}-node-${{ hashFiles('**/package-lock.json')}}
+        restore-keys: |
+          ${{runner.os}}-node_modules
+    - name: Setup Dependencies
+      if: steps.node_modules-cache.outputs.cache-hit != 'true'
+      shell: bash
+      run: npm ci
