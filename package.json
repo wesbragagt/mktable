@@ -22,6 +22,8 @@
   "author": "wesbragagt",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@types/node": "^20.10.4",
     "husky": "^8.0.3",
     "oxlint": "^0.0.20",
