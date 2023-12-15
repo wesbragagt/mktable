@@ -28,6 +28,7 @@
     "@types/node": "^20.10.4",
     "generate-license-file": "^3.0.1",
     "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
     "oxlint": "^0.0.20",
     "tsup": "^8.0.1",
     "tsx": "^4.6.2",
