@@ -1,6 +1,6 @@
 {
   "name": "mktable",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "CLI tool that outputs a table of contents based on a markdown file headers",
   "main": "dist/index.js",
   "bin": {
