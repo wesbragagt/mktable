@@ -43,4 +43,4 @@ You can even automate your README table of contents on lint-staged for example w
 
 ## License
 
-[MIT]()
+MIT
