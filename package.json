@@ -10,7 +10,8 @@
     "test": "vitest",
     "build": "tsup src/index.ts",
     "lint": "oxlint src",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepare": "[ -d '.husky' ] && husky install || true"
   },
   "keywords": [
     "markdown",
@@ -22,6 +23,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.10.4",
+    "husky": "^8.0.3",
     "oxlint": "^0.0.20",
     "tsup": "^8.0.1",
     "tsx": "^4.6.2",
