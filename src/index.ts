@@ -1,5 +1,7 @@
 #! /usr/bin/env node
 
+// mktable
+
 import fs from 'fs';
 import { TableContent } from './table-content';
 import { Commander } from './commander';
