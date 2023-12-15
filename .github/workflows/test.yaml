@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: .github/shared/setup
+      - uses: './.github/shared/setup'
       - name: Lint & Typecheck
         run: npm run typecheck && npm run lint
   test:
