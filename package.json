@@ -1,8 +1,16 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "mktable",
+  "files": [
+    "dist"
+  ],
   "version": "0.0.1",
   "description": "CLI tool that outputs a table of contents based on a markdown file headers",
   "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wesbragagt/type-envd.git"
+  },
   "bin": {
     "mktable": "dist/index.js"
   },
