@@ -19,7 +19,7 @@ jobs:
           release-type: node
           package-name: yargs
       - uses: actions/checkout@v3
-      - uses: .github/shared/setup
+      - uses: '.github/shared/setup'
       - run: npm publish
         env:
           NPM_PERSONAL_AUTH_TOKEN: ${{secrets.NPM_PERSONAL_AUTH_TOKEN}}
