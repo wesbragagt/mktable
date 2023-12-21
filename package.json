@@ -1,15 +1,21 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "type": "module",
   "name": "mktable",
+  "keywords": [
+    "markdown",
+    "table",
+    "contents",
+    "cli"
+  ],
+  "description": "CLI tool that outputs a table of contents based on a markdown file headers",
+  "version": "1.1.3",
+  "type": "module",
   "files": [
     "dist"
   ],
-  "version": "1.1.3",
-  "description": "CLI tool that outputs a table of contents based on a markdown file headers",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wesbragagt/type-envd.git"
+    "url": "git+https://github.com/wesbragagt/mktable.git"
   },
   "bin": {
     "mktable": "dist/index.mjs"
@@ -21,14 +27,10 @@
     "typecheck": "tsc --noEmit",
     "prepare": "[ -d '.husky' ] && husky install || true"
   },
-  "keywords": [
-    "markdown",
-    "table",
-    "contents",
-    "cli"
-  ],
-  "author": "wesbragagt",
-  "license": "MIT",
+  "dependencies": {
+    "mdast-util-from-markdown": "^2.0.0",
+    "mdast-util-to-markdown": "^2.1.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
@@ -45,9 +47,6 @@
     "tsx": "^4.7.0",
     "typescript": "^4.5.4"
   },
-  "dependencies": {
-    "mdast-util-from-markdown": "^2.0.0",
-    "mdast-util-to-markdown": "^2.1.0",
-    "remark-stringify": "^11.0.0"
-  }
+  "author": "wesbragagt",
+  "license": "MIT"
 }
