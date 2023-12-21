@@ -1,15 +1,12 @@
 #! /usr/bin/env node
 
-// mktable
-
 import fs from 'fs';
 import { TableContent } from './table-content';
 import { Commander } from './commander';
 import path from 'path';
+import packageJson from '../package.json';
 
-const packageVersion = require('../package.json').version;
-
-const commander = new Commander({ version: packageVersion });
+const commander = new Commander({ version: packageJson.version });
 const args = process.argv.slice(2);
 const isHelp = args.find((value) => value === '--help' || value === '-h');
 const isVersion = args.find((value) => value === '--version' || value === '-v');
@@ -40,5 +37,5 @@ if (filetargetExtension !== 'md') {
 }
 
 const contentRead = fs.readFileSync(path.join(process.cwd(), filetarget), 'utf8');
-const tableContent = new TableContent(contentRead).make();
-process.stdout.write(tableContent.join('\n'));
+const newReadme = new TableContent(contentRead).markdown;
+fs.writeFileSync(path.join(process.cwd(), filetarget), newReadme);

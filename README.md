@@ -2,6 +2,21 @@
 
 Dead simple CLI command to generate a table of contents from a markdown file
 
+## Table of Contents
+
+* [Table of Contents](#table-of-contents)
+* [Example](#example)
+  * [Output](#output)
+* [Author](#author)
+* [License](#license)
+
+## Table of Contents
+
+* [Example](#example)
+  * [Output](#output)
+* [Author](#author)
+* [License](#license)
+
 ![mktable in action](./assets/mktable.gif)
 
 ## Example
@@ -17,6 +32,7 @@ $ npm install -g mktable
 ```
 
 ### Output
+
 ```markdown
 - [MkTable](#mktable)
   - [Example](#example)
@@ -41,7 +57,7 @@ You can even automate your README table of contents on lint-staged for example w
 
 ## Author
 
-- [Wes Braga](https://github.com/wesbragagt)
+* [Wes Braga](https://github.com/wesbragagt)
 
 ## License
 
