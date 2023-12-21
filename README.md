@@ -2,6 +2,8 @@
 
 Dead simple CLI command to generate a table of contents from a markdown file
 
+![mktable in action](./assets/mktable.gif)
+
 ## Table of Contents
 
 * [Table of Contents](#table-of-contents)
@@ -9,15 +11,6 @@ Dead simple CLI command to generate a table of contents from a markdown file
   * [Output](#output)
 * [Author](#author)
 * [License](#license)
-
-## Table of Contents
-
-* [Example](#example)
-  * [Output](#output)
-* [Author](#author)
-* [License](#license)
-
-![mktable in action](./assets/mktable.gif)
 
 ## Example
 
