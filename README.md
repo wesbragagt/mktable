@@ -23,7 +23,7 @@ or install it globally
 $ npm install -g mktable
 ```
 
-### Output
+### Write to your README.md file
 
 ```markdown
 - [MkTable](#mktable)
@@ -32,19 +32,6 @@ $ npm install -g mktable
   - [Usage](#usage)
   - [Options](#options)
   - [License](#license)
-```
-
-You can even automate your README table of contents on lint-staged for example with a simple npm script:
-
-```json
-{
-  "lint-stage": {
-    "README.md": [
-      "mktable README.md",
-      "git add README.md"
-    ]
-  }
-}
 ```
 
 ## Author
