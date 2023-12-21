@@ -12,7 +12,7 @@
     "url": "git+https://github.com/wesbragagt/type-envd.git"
   },
   "bin": {
-    "mktable": "dist/index.js"
+    "mktable": "dist/index.mjs"
   },
   "scripts": {
     "test": "mocha -r tsx src/__tests__/*.ts",
