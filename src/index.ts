@@ -4,9 +4,9 @@ import fs from 'fs';
 import { TableContent } from './table-content';
 import { Commander } from './commander';
 import path from 'path';
-import packageJson from '../package.json';
+import { version } from '../package.json';
 
-const commander = new Commander({ version: packageJson.version });
+const commander = new Commander({ version });
 const args = process.argv.slice(2);
 const isHelp = args.find((value) => value === '--help' || value === '-h');
 const isVersion = args.find((value) => value === '--version' || value === '-v');
@@ -35,7 +35,8 @@ const filetargetExtension = filetargetSplit[filetargetSplit.length - 1];
 if (filetargetExtension !== 'md') {
   throw new Error('File target must be md');
 }
-
-const contentRead = fs.readFileSync(path.join(process.cwd(), filetarget), 'utf8');
+const filePath = path.join(process.cwd(), filetarget); 
+const contentRead = fs.readFileSync(filePath, 'utf8');
 const newReadme = new TableContent(contentRead).markdown;
 fs.writeFileSync(path.join(process.cwd(), filetarget), newReadme);
+console.log(`Modified markdown ${filePath}`);

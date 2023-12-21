@@ -6,7 +6,6 @@ Dead simple CLI command to generate a table of contents from a markdown file
 
 ## Table of Contents
 
-* [Table of Contents](#table-of-contents)
 * [Example](#example)
   * [Output](#output)
 * [Author](#author)
