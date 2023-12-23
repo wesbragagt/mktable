@@ -10,7 +10,6 @@ Dead simple CLI command to generate a table of contents from a markdown file
   * [Write to your README.md file](#write-to-your-readme.md-file)
 * [Author](#author)
 * [License](#license)
-* [FU](#fu)
 
 ## Example
 

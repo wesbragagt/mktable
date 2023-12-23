@@ -22,7 +22,7 @@ if (isVersion) {
 }
 
 const filetarget = args[0] || 'README.md';
-const fileTargetPath = path.resolve(filetarget);
+const fileTargetPath = path.isAbsolute(filetarget) ? filetarget : path.join(process.cwd(), filetarget);
 
 if (!fs.existsSync(fileTargetPath)) {
   process.stdout.write(`File ${fileTargetPath} not found\n`);
