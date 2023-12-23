@@ -21,6 +21,7 @@
     "mktable": "dist/index.mjs"
   },
   "scripts": {
+    "postinstall": "npm run build",
     "test": "mocha -r tsx src/__tests__/*.ts",
     "build": "tsup src/index.ts --format esm",
     "lint": "oxlint src",
