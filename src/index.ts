@@ -22,7 +22,7 @@ if (isVersion) {
 }
 
 const filetarget = args[0] || 'README.md';
-const fileTargetPath = path.join(process.cwd(), filetarget);
+const fileTargetPath = path.resolve(filetarget);
 
 if (!fs.existsSync(fileTargetPath)) {
   process.stdout.write(`File ${fileTargetPath} not found\n`);
@@ -30,13 +30,12 @@ if (!fs.existsSync(fileTargetPath)) {
   process.exit(1);
 }
 
-const filetargetSplit = filetarget.split('.');
+const filetargetSplit = fileTargetPath.split('.');
 const filetargetExtension = filetargetSplit[filetargetSplit.length - 1];
 if (filetargetExtension !== 'md') {
   throw new Error('File target must be md');
 }
-const filePath = path.join(process.cwd(), filetarget); 
-const contentRead = fs.readFileSync(filePath, 'utf8');
+const contentRead = fs.readFileSync(fileTargetPath, 'utf8');
 const newReadme = new TableContent(contentRead).markdown;
-fs.writeFileSync(path.join(process.cwd(), filetarget), newReadme);
-console.log(`Modified markdown ${filePath}`);
+fs.writeFileSync(fileTargetPath, newReadme);
+console.log(`Modified markdown ${fileTargetPath}`);

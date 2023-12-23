@@ -25,7 +25,13 @@
     "build": "tsup src/index.ts --format esm",
     "lint": "oxlint src",
     "typecheck": "tsc --noEmit",
-    "prepare": "[ -d '.husky' ] && husky install || true"
+    "prepare": "[ -d '.husky' ] && husky install || true",
+    "lint-staged": "lint-staged"
+  },
+  "lint-staged": {
+    "README.md": [
+      "./dist/index.js"
+    ]
   },
   "dependencies": {
     "mdast-util-from-markdown": "^2.0.0",
