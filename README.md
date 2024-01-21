@@ -14,7 +14,7 @@ Dead simple CLI command to generate a table of contents from a markdown file
 ## Example
 
 ```bash
-$ npx mktable README.md
+$ npx mktable@latest README.md
 ```
 
 or install it globally
