@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/package",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "name": "mktable",
   "keywords": [
     "markdown",
