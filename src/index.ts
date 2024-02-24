@@ -6,6 +6,7 @@ import { Commander } from './commander';
 import path from 'path';
 import { version } from '../package.json';
 
+// test release 1
 console.log('mktable - Markdown Table of Contents');
 
 const commander = new Commander({ version });
