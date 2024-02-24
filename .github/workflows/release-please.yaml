@@ -30,11 +30,6 @@ jobs:
       - uses: actions/checkout@v3
       - uses: './.github/shared/setup'
       - run: npm run build
-      - run: npm pack
-      - run: echo "package_version=$(jq -r .version package.json)" >> "$GITHUB_OUTPUT"
-      - uses: actions/upload-artifact@v4
-        env:
-          VERSION: ${{github.steps.outputs.vars.package_version}}
-        with:
-          name: release-${{env.VERSION}}
-          path: mktable-${{env.VERSION}}.tgz 
+      - run: npm publish
+        env: 
+          NPM_PERSONAL_ACCESS_TOKEN: ${{ secrets.NPM_PERSONAL_ACCESS_TOKEN }}
