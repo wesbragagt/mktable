@@ -7,6 +7,7 @@ on:
 
 jobs:
   Lint:
+    if: "!startsWith(github.ref, 'refs/heads/chore(release)')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -14,6 +15,7 @@ jobs:
       - name: Lint & Typecheck
         run: npm run typecheck && npm run lint
   UnitTests:
+    if: "!startsWith(github.ref, 'refs/heads/chore(release)')"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
