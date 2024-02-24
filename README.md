@@ -1,6 +1,6 @@
 # MkTable
 
-Dead simple CLI command to generate a table of contents from a markdown file
+Dead simple CLI command to generate a table of contents from a markdown file.
 
 ![mktable in action](./assets/mktable.gif)
 
