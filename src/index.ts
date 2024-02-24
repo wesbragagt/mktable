@@ -6,6 +6,8 @@ import { Commander } from './commander';
 import path from 'path';
 import { version } from '../package.json';
 
+console.log('mktable - Markdown Table of Contents');
+
 const commander = new Commander({ version });
 const args = process.argv.slice(2);
 const isHelp = args.find((value) => value === '--help' || value === '-h');
@@ -32,10 +34,14 @@ if (!fs.existsSync(fileTargetPath)) {
 
 const filetargetSplit = fileTargetPath.split('.');
 const filetargetExtension = filetargetSplit[filetargetSplit.length - 1];
+
 if (filetargetExtension !== 'md') {
   throw new Error('File target must be md');
 }
+
 const contentRead = fs.readFileSync(fileTargetPath, 'utf8');
 const newReadme = new TableContent(contentRead).markdown;
+
 fs.writeFileSync(fileTargetPath, newReadme);
+
 console.log(`Modified markdown ${fileTargetPath}`);
